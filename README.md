@@ -31,7 +31,7 @@ streamlit run app_bp_response_adjustable.py
    - CBM
    - Ef
 
-2. **或输入气体名称**：也可以直接在 "Gas Name" 输入框中输入气体名称（如 NO2, CO, NH3 等），系统会直接从数据中查找对应的 Response 值。
+2. **或输入气体名称**：也可以直接在 "Gas Name" 输入框中输入气体名称（如 NO2, CO, NH3 等）
 
 3. **调整阈值**：使用滑块调整 Decision Threshold（决策阈值），默认值会根据数据自动计算。
 
