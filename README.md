@@ -48,3 +48,55 @@ streamlit run app_bp_response_adjustable.py
 - 输入的特征值应在合理范围内，系统会根据数据范围自动限制输入
 - 如果输入了气体名称，系统会优先使用气体查找功能，而不是特征值预测
 
+---
+
+# BP Response Predictor Usage Guide
+
+## Environment Setup
+
+1. Ensure Python 3.7 or higher is installed
+2. Install required dependencies:
+   ```bash
+   pip install streamlit numpy pandas matplotlib scikit-learn openpyxl
+   ```
+   (Optional) If SHAP functionality is needed, install:
+   ```bash
+   pip install shap
+   ```
+
+## Running the Code
+
+Run the following command in the terminal to start the application:
+
+```bash
+streamlit run app_bp_response_adjustable.py
+```
+
+The application will automatically open in your browser (usually at `http://localhost:8501`)
+
+## Usage
+
+1. **Input Feature Values**: In the left sidebar, enter values for the following five features:
+   - Eads
+   - ℇp
+   - VBM
+   - CBM
+   - Ef
+
+2. **Or Input Gas Name**: Alternatively, you can directly enter a gas name (such as NO2, CO, NH3, etc.) in the "Gas Name" input box
+
+3. **Adjust Threshold**: Use the slider to adjust the Decision Threshold. The default value is automatically calculated based on the data.
+
+4. **View Prediction Results**: After clicking the "Predict" button, the page will display:
+   - Prediction result (Response or Non-Response)
+   - Weighted score and threshold information
+   - Feature decision details table
+   - Weighted score calculation visualization chart
+   - Feature value ranges visualization chart
+
+## Notes
+
+- Ensure the `BP-qiti.xlsx` data file is in the same directory as the code file
+- Input feature values should be within reasonable ranges. The system will automatically limit inputs based on the data range
+- If a gas name is entered, the system will prioritize using the gas lookup function instead of feature value prediction
+
